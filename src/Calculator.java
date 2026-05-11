@@ -34,5 +34,21 @@ public class Calculator {
 
         return digits;
     }
+
+    public static boolean isPalindromeNumber(int number) {
+
+        int originalNumber = Math.abs(number);
+
+        int temporal = originalNumber;
+
+        int reversedNumber = 0;
+
+        while (temporal != 0) {
+            int digit = temporal % 10;
+            reversedNumber = reversedNumber * 10 + digit;
+            temporal /= 10;
+        }
+        return originalNumber == reversedNumber;
+    }
+
 }
-;
