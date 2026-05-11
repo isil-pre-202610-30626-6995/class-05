@@ -6,5 +6,7 @@ public class App {
         System.out.println(Calculator.generateRandomNumber(1, 5));
 
         System.out.println("Digits: " + Calculator.countDigits(5789));
+
+        System.out.println(Calculator.getDigits(1259));
     }
 }

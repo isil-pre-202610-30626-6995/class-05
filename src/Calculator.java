@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Calculator {
     
     public static int generateRandomNumber(int min, int max) {
@@ -13,6 +15,24 @@ public class Calculator {
             number /= 10;
             count++;
         } while (number != 0);
+
         return count;
     }
+
+    public static ArrayList<Integer> getDigits(int number) {
+        number = Math.abs(number);
+        ArrayList<Integer> digits = new ArrayList<>();
+
+        do { 
+            int digit = number % 10;
+            digits.add(0,digit);
+
+            number /= 10;
+
+
+        } while (number != 0);
+
+        return digits;
+    }
 }
+;
